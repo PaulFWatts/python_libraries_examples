@@ -30,9 +30,16 @@ cd python_libraries_examples
 # Navigate to any library demo
 cd FastAPI  # Example
 
-# Install dependencies and run
+# Install dependencies and run main application
 uv sync
 uv run python main.py
+
+# For demos with examples (in another terminal):
+uv run python examples/demo_usage.py      # Try example scripts
+uv run python examples/client_demo.py     # Advanced examples
+
+# Run tests to verify everything works
+uv run pytest -v --cov
 ```
 
 ## 📚 Library Categories
@@ -211,6 +218,16 @@ cd FastAPI
 uv sync
 uv run python main.py
 # Visit http://localhost:8000/docs for interactive API docs
+```
+
+**Try the Examples**:
+```bash
+# In Terminal 1: Start the server
+uv run python main.py
+
+# In Terminal 2: Run demo scripts
+uv run python examples/demo_usage.py      # Simple synchronous demo
+uv run python examples/client_demo.py     # Advanced async client demo
 ```
 
 ## 📄 License

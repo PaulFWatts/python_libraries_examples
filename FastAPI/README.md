@@ -15,6 +15,30 @@ uv run python main.py
 # http://localhost:8000/docs
 ```
 
+## 🎮 Running Examples
+
+This demo includes two example scripts demonstrating different approaches to API interaction:
+
+### Option 1: Simple Synchronous Demo
+```bash
+# Terminal 1: Start the FastAPI server
+uv run python main.py
+
+# Terminal 2: Run the demo script (in another terminal)
+uv run python examples/demo_usage.py
+```
+
+### Option 2: Advanced Async Client Demo
+```bash
+# Terminal 1: Start the FastAPI server
+uv run python main.py
+
+# Terminal 2: Run the async client demo (in another terminal)
+uv run python examples/client_demo.py
+```
+
+**Note**: The server must be running before executing either example script. The examples will demonstrate creating, updating, filtering, and deleting todos through the API.
+
 ## 📋 Features Demonstrated
 
 ### Core FastAPI Features
