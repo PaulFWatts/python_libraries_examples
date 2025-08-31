@@ -37,10 +37,10 @@ packages = ["."]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
-addopts = "-v --cov=. --cov-report=html --cov-report=term --cov-config=pyproject.toml"
+addopts = "-v --cov=main --cov-report=html --cov-report=term"
 
 [tool.coverage.run]
-source = ["."]
+source = ["main"]
 omit = [
     "tests/*",
     ".venv/*",

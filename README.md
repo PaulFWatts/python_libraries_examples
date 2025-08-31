@@ -39,7 +39,7 @@ uv run python examples/demo_usage.py      # Try example scripts
 uv run python examples/client_demo.py     # Advanced examples
 
 # Run tests to verify everything works
-uv run pytest -v --cov
+uv run python -m pytest -v --cov
 ```
 
 ## 📚 Library Categories
@@ -155,8 +155,9 @@ uv sync
 # Run the application
 uv run python main.py
 
-# Run tests with coverage
-uv run pytest -v --cov --cov-report=html
+# Run tests with coverage (use python -m for reliability)
+uv run python -m pytest -v --cov
+uv run python -m pytest --cov-report=html
 
 # Format and lint code
 uv run black .

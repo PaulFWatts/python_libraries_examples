@@ -103,14 +103,17 @@ Extends TodoBase with:
 Run the comprehensive test suite:
 
 ```bash
-# Run all tests with coverage
-uv run pytest -v --cov
+# Run all tests with coverage (recommended)
+uv run python -m pytest tests/ -v --cov=main
+
+# Alternative: Run with direct Python interpreter
+.\.venv\Scripts\python.exe -m pytest tests/ -v --cov=main
 
 # Run specific test categories
-uv run pytest tests/test_main.py::TestTodosCRUD -v
+uv run python -m pytest tests/test_main.py::TestTodosCRUD -v
 
 # Generate HTML coverage report
-uv run pytest --cov-report=html
+uv run python -m pytest tests/ --cov=main --cov-report=html
 ```
 
 ### Test Categories

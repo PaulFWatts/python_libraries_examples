@@ -36,8 +36,11 @@ uv run python main.py      # Run main application
 uv run python -m <module>  # Run as module
 
 # Testing comprehensive suites
-uv run pytest -v --cov    # Run tests with coverage
-uv run pytest --cov-report=html  # Generate HTML coverage report
+uv run python -m pytest -v --cov    # Run tests with coverage (recommended)
+uv run python -m pytest --cov-report=html  # Generate HTML coverage report
+
+# Alternative direct pytest (may have issues on some systems)
+# uv run pytest -v --cov    # Use python -m pytest instead if this fails
 
 # Code quality and formatting
 uv run black .            # Format code
@@ -56,7 +59,7 @@ uv run black .            # Auto-format code
 # Complete workflow for new library demonstrations
 # 1. Create and develop the library demo (see Adding New Library Demonstrations)
 # 2. Run comprehensive testing and quality checks
-uv run pytest -v --cov --cov-report=html
+uv run python -m pytest -v --cov --cov-report=html
 uv run ruff check . --fix
 uv run black .
 
