@@ -184,7 +184,8 @@ app.add_middleware(
 )
 
 app.add_middleware(
-    TrustedHostMiddleware, allowed_hosts=["*"]  # In production, specify actual hosts
+    TrustedHostMiddleware,
+    allowed_hosts=["*"],  # In production, specify actual hosts
 )
 
 

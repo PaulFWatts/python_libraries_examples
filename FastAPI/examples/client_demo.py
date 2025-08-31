@@ -216,8 +216,8 @@ async def concurrent_operations_demo():
     tasks = []
     for i in range(5):
         task = client.create_todo(
-            title=f"Concurrent Todo {i+1}",
-            description=f"Todo created concurrently #{i+1}",
+            title=f"Concurrent Todo {i + 1}",
+            description=f"Todo created concurrently #{i + 1}",
             priority=(i % 5) + 1,
         )
         tasks.append(task)
