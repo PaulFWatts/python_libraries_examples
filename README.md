@@ -185,7 +185,33 @@ See the [AI Agent Instructions](.github/copilot-instructions.md) for detailed de
 
 ## 📚 Featured Comprehensive Demonstrations
 
-*Library demonstrations will be listed here as they are implemented*
+### ⚡ FastAPI - Modern Async Web Framework
+**Location**: `FastAPI/`
+
+A complete Todo API demonstration showcasing:
+- **RESTful endpoints** with full CRUD operations
+- **Async/await patterns** for optimal performance  
+- **Pydantic v2 models** with data validation
+- **Middleware integration** (CORS, logging, security)
+- **OpenAPI documentation** auto-generated at `/docs`
+- **Comprehensive testing** (25 tests, 94% coverage)
+- **Statistics and filtering** endpoints
+- **Error handling** with proper HTTP status codes
+
+**Key Features**:
+- Health check endpoint with system stats
+- Todo filtering by completion status and priority
+- Pagination support for large datasets
+- Request/response validation with detailed error messages
+- Production-ready patterns with logging and middleware
+
+**Quick Start**:
+```bash
+cd FastAPI
+uv sync
+uv run python main.py
+# Visit http://localhost:8000/docs for interactive API docs
+```
 
 ## 📄 License
 
