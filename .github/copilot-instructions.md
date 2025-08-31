@@ -44,6 +44,64 @@ uv run black .            # Format code
 uv run isort .            # Sort imports
 uv run mypy .             # Type checking
 uv run ruff check         # Fast linting
+
+# Auto-fix formatting and linting issues
+uv run ruff check . --fix # Auto-fix linting issues
+uv run black .            # Auto-format code
+```
+
+### Git Workflow and Documentation Updates
+
+```bash
+# Complete workflow for new library demonstrations
+# 1. Create and develop the library demo (see Adding New Library Demonstrations)
+# 2. Run comprehensive testing and quality checks
+uv run pytest -v --cov --cov-report=html
+uv run ruff check . --fix
+uv run black .
+
+# 3. Export requirements for compatibility
+uv export --format requirements-txt > requirements.txt
+
+# 4. Update root README.md to include the new demonstration
+# Add entry to "Featured Comprehensive Demonstrations" section
+
+# 5. Commit changes with descriptive message
+git add -A
+git commit -m "feat: Add comprehensive [LibraryName] demo with [key features]
+
+- [Feature 1 description]
+- [Feature 2 description]  
+- [Testing/coverage details]
+- [Documentation updates]"
+
+# 6. Verify commit includes all necessary files
+git log --oneline -1
+git show --name-only HEAD
+```
+
+### Repository Maintenance
+
+```bash
+# After completing a library demonstration:
+# 1. Update root README.md with new demo information
+# Add entry to "📚 Featured Comprehensive Demonstrations" section
+# Include key features, quick start instructions, and file locations
+
+# 2. Ensure consistent documentation structure
+# Each demo should have comprehensive README.md
+# Include usage examples and installation instructions  
+# Document any special requirements or setup steps
+
+# 3. Validate overall repository health
+cd <workspace_root>
+uv run --directory FastAPI pytest  # Test specific demo
+# Repeat for other demos as needed
+
+# 4. Maintain repository-level documentation
+# Keep main README.md current with all available demos
+# Update PYTHON_UV_COMMANDS_CHEAT_SHEET.md if new patterns emerge
+# Review and update copilot-instructions.md based on lessons learned
 ```
 
 ## Library-Specific Implementation Patterns
