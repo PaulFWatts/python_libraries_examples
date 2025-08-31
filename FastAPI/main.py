@@ -132,18 +132,21 @@ async def lifespan(app: FastAPI):
             description="Complete the FastAPI tutorial and build a demo application",
             priority=3,
             completed=False,
+            updated_at=None,
         ),
         Todo(
             title="Write comprehensive tests",
             description="Implement unit and integration tests with pytest",
             priority=4,
             completed=True,
+            updated_at=None,
         ),
         Todo(
             title="Deploy to production",
             description="Set up CI/CD pipeline and deploy the application",
             priority=5,
             completed=False,
+            updated_at=None,
         ),
     ]
     todos_storage.extend(sample_todos)
